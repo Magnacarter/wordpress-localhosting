@@ -2,20 +2,19 @@
 /**
  * Plugin bootstrap file
  *
- * @link              https://github.com/
+ * @link              https://github.com/Magnacarter/wordpress-localhosting
  * @since             1.0.0
  * @package           MAGNACARTER\WordPress_Localhosting\
  *
  * @wordpress-plugin
  * Plugin Name:     WordPress Localhosting
- * Plugin URI:      https://github.com/
+ * Plugin URI:      https://github.com/Magnacarter/wordpress-localhosting
  * Description:     Pull in images from the production servers uploads dir
  * Version:         1.0.0
  * Author:          MAGNACARTER
- * Author URI:      https://MAGNACARTER.com
+ * Author URI:      https://adamkristopher.co
  * Text Domain:     wordpress-localhosting
  * Domain Path:     /languages
- * GitHub Plugin URI: https://github.com/
  */
 namespace MAGNACARTER\WordPress_Localhosting;
 
@@ -51,7 +50,7 @@ class Prod_Images {
 
 	/**
 	 * Setttings Init
-	 * 
+	 *
 	 * Register settings for our custom plugin page
 	 * @return void
 	 */
@@ -83,6 +82,8 @@ class Prod_Images {
 
 	/**
 	 * Dev callback
+	 *
+	 * @param array
 	 * @return void
 	 */
 	public function dev_callback( $args ) {
@@ -98,6 +99,8 @@ class Prod_Images {
 	 * the "label_for" key value is used for the "for" attribute of the <label>.
 	 * the "class" key value is used for the "class" attribute of the <tr> containing the field.
 	 * you can add custom key value pairs to be used inside your callbacks.
+	 *
+	 * @param array
 	 * @return void
 	 */
 	public function user_input_callback( $args ) {
@@ -114,7 +117,9 @@ class Prod_Images {
 	}
 
 	/**
-	 * top level menu
+	 * options page
+	 *
+	 * @return void
 	 */
 	public function options_page() {
 		// add top level menu page
@@ -128,8 +133,9 @@ class Prod_Images {
 	}
 
 	/**
-	 * top level menu:
-	 * callback functions
+	 * prod images page html
+	 *
+	 * @return void
 	 */
 	public function prod_images_page_html() {
 		// check user capabilities
